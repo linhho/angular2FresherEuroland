@@ -17,14 +17,12 @@ import { Component } from '@angular/core';
         </header>
         <!-- web content -->
         <div class="container">
-            <div class="search">
-                <input type="text" name="search" placeholder="Search..." [(ngModel)]="search-product" />    
-            </div>
+            
             <!-- outlet -->
             <router-outlet></router-outlet>
         </div>
         <footer>
-            Develop by <a href="linhho.net">Linh Hoo</a>
+            Develop by <a href="http://linhho.net">Linh Hoo</a>
         </footer>
         `
 })

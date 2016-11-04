@@ -3,6 +3,7 @@
  * import module needed
  */
 import { Component } from '@angular/core';
+import { Product } from '../model/product.model';
 
 /*
 * decorator function
@@ -19,52 +20,61 @@ import { Component } from '@angular/core';
 export class HomeComponent { 
     //variable: type
     //public variable
-    products: [any] = [
+    products: Product[] = [
         {
             "id": 1,
-            "name": "Nike Hyper Adapt 1.0",
-            "thumb": "NikeHyperAdapt1.0.jpg",
+            "name": "Nike Free Trainer",
+            "thumb": "nikeFreeTrainer.jpg",
             "info": {
                 "madein": "Viet Nam",
                 "yearProd": 2015,
+                "story": "Đây là câu chuyện hình thành của đôi giày này"
             },
             "desc": "abc",
             "gallery": [
                 {
                     "color": "black",
-                    "image": "NikeHyperAdapt1.0.jpg",
+                    "image": "nikeFreeTrainer.jpg",
                     "size": [
                         {
                             "sizeUS": 40,
                             "sizeEU": 40,
                             "sizeUK": 40,
+                            "quantity": 10
                         },
                         {
                             "sizeUS": 39,
                             "sizeEU": 39,
                             "sizeUK": 39,
+                            "quantity": 10
                         }
                     ]
                 },
                 {
-                    "color": "pink",
-                    "image": "NikeHyperAdapt1.0.jpg",
+                    "color": "white",
+                    "image": "nikeFreeTrainer.jpg",
                     "size": [
                         {
                             "sizeUS": 40,
                             "sizeEU": 40,
                             "sizeUK": 40,
+                            "quantity": 20
                         },
                         {
                             "sizeUS": 39,
                             "sizeEU": 39,
                             "sizeUK": 39,
+                            "quantity": 10
                         }
                     ]
-                },
+                }
             ],
             "cost": 1000,
-            "category": "Nike"
+            "quantity": 50,
+            "category": {
+                "categoryId": 1,
+                "categoryName": "Nike"
+            }
         },
         {
             "id": 2,
@@ -73,6 +83,7 @@ export class HomeComponent {
             "info": {
                 "madein": "Viet Nam",
                 "yearProd": 2015,
+                "story": "Đây là câu chuyện hình thành của đôi giày này"
             },
             "desc": "abc",
             "gallery": [
@@ -84,11 +95,13 @@ export class HomeComponent {
                             "sizeUS": 40,
                             "sizeEU": 40,
                             "sizeUK": 40,
+                            "quantity": 10
                         },
                         {
                             "sizeUS": 39,
                             "sizeEU": 39,
                             "sizeUK": 39,
+                            "quantity": 10
                         }
                     ]
                 },
@@ -100,17 +113,133 @@ export class HomeComponent {
                             "sizeUS": 40,
                             "sizeEU": 40,
                             "sizeUK": 40,
+                            "quantity": 10
                         },
                         {
                             "sizeUS": 39,
                             "sizeEU": 39,
                             "sizeUK": 39,
+                            "quantity": 10
+                        }
+                    ]
+                }
+            ],
+            "cost": 2000,
+            "quantity": 40,
+            "category": {
+                "categoryId": 1,
+                "categoryName": "Nike"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Nike Hyper Adapt 1.0",
+            "thumb": "NikeHyperAdapt1.0.jpg",
+            "info": {
+                "madein": "Viet Nam",
+                "yearProd": 2015,
+                "story": "Đây là câu chuyện hình thành của đôi giày này"
+            },
+            "desc": "abc",
+            "gallery": [
+                {
+                    "color": "red",
+                    "image": "NikeHyperAdapt1.0.jpg",
+                    "size": [
+                        {
+                            "sizeUS": 40,
+                            "sizeEU": 40,
+                            "sizeUK": 40,
+                            "quantity": 10
+                        },
+                        {
+                            "sizeUS": 39,
+                            "sizeEU": 39,
+                            "sizeUK": 39,
+                            "quantity": 10
                         }
                     ]
                 },
+                {
+                    "color": "black",
+                    "image": "NikeHyperAdapt1.0.jpg",
+                    "size": [
+                        {
+                            "sizeUS": 40,
+                            "sizeEU": 40,
+                            "sizeUK": 40,
+                            "quantity": 10
+                        },
+                        {
+                            "sizeUS": 39,
+                            "sizeEU": 39,
+                            "sizeUK": 39,
+                            "quantity": 10
+                        }
+                    ]
+                }
             ],
             "cost": 2000,
-            "category": "Nike"
+            "quantity": 40,
+            "category": {
+                "categoryId": 1,
+                "categoryName": "Nike"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Nike Hyperadapt Angle Front",
+            "thumb": "nikeHyperadaptAngleFront.jpg",
+            "info": {
+                "madein": "Viet Nam",
+                "yearProd": 2015,
+                "story": "Đây là câu chuyện hình thành của đôi giày này"
+            },
+            "desc": "abc",
+            "gallery": [
+                {
+                    "color": "red",
+                    "image": "nikeHyperadaptAngleFront.jpg",
+                    "size": [
+                        {
+                            "sizeUS": 40,
+                            "sizeEU": 40,
+                            "sizeUK": 40,
+                            "quantity": 10
+                        },
+                        {
+                            "sizeUS": 39,
+                            "sizeEU": 39,
+                            "sizeUK": 39,
+                            "quantity": 10
+                        }
+                    ]
+                },
+                {
+                    "color": "black",
+                    "image": "nikeHyperadaptAngleFront.jpg",
+                    "size": [
+                        {
+                            "sizeUS": 40,
+                            "sizeEU": 40,
+                            "sizeUK": 40,
+                            "quantity": 10
+                        },
+                        {
+                            "sizeUS": 39,
+                            "sizeEU": 39,
+                            "sizeUK": 39,
+                            "quantity": 10
+                        }
+                    ]
+                }
+            ],
+            "cost": 2000,
+            "quantity": 40,
+            "category": {
+                "categoryId": 1,
+                "categoryName": "Nike"
+            }
         }
     ] 
 

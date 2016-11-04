@@ -1,3 +1,7 @@
+.loading {
+  background-color: #e91e63;
+  height: 100%;
+}
 /* Master Styles */
 html, body { 
   height: 100%;
@@ -51,7 +55,7 @@ a:link, a:visited {
   float: left;
 }
 /*
-* web container
+* Home style
 */
 .container {
   min-height: 100%;
@@ -62,13 +66,17 @@ a:link, a:visited {
 .search input {
   width: 50%;
   border: 0px;
-  padding: 5px 15px;
+  padding: 5px;
   font-size: 25px;
   border-radius: 0px;
   background-color: #000;
   color: white;
   height: 40px;
   margin-left: 25%;
+  clear: both;
+}
+.web-content {
+  clear: both;
 }
 .product-box {
   width: 33.333%;
@@ -83,6 +91,27 @@ a:link, a:visited {
 .product-info {
   height: 100px;
   background-color: #ad1457;
+}
+
+.categories {
+  list-style-type: none;
+  padding: 0px;
+}
+.categories li {
+  left: 0px;
+  width: 25%;
+  float: left;
+}
+.categories li a {
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 10px;
+}
+.categories li a:hover, .categories li a:active {
+    background-color: #e91e63;
+}
+.categories li a img {
+  width: 100%;
 }
 
 footer {

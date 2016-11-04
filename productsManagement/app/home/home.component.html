@@ -1,9 +1,20 @@
-<div class="product-box" *ngFor="let product of products">
-    <div class="product">
-        <img src="images/thumbnail/{{product.thumb}}" alt="">
-        <div class="product-info">
-            <div>{{product.name}}</div>
-            <div>{{product.cost}}</div>
+<ul class="categories">
+    <li><a routerLink="/nike"><img src="images/nike-logo.png" alt="Nike"></a></li>
+    <li><a routerLink="/adidas" ><img src="images/adidas-logo.png" alt="Adidas"></a></li>
+    <li><a routerLink="/puma" ><img src="images/puma-logo.png" alt="Puma"></a></li>
+    <li><a routerLink="/converse" ><img src="images/converse-logo.png" alt="Converse"></a></li>
+</ul>
+<div class="search">
+    <input type="text" name="search" placeholder="Search..." [(ngModel)]="searchProduct" />    
+</div>
+<div class="web-content">
+    <div class="product-box" *ngFor="let product of products | filterProduct:searchProduct">
+        <div class="product">
+            <img src="images/thumbnail/{{product.thumb}}" alt="{{product.name}}">
+            <div class="product-info">
+                <div>{{product.name}}</div>
+                <div>{{product.cost | currency:'USD':true:'1.2-2'}}</div>
+            </div>
         </div>
     </div>
 </div>
