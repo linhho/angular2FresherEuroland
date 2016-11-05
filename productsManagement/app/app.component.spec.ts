@@ -10,7 +10,6 @@ describe('AppComponent', function () {
   let de: DebugElement;
   let comp: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
-
   beforeEach(async(() => {
    TestBed.configureTestingModule({
       declarations: [ AppComponent ]

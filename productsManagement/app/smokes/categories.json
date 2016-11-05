@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Nike",
+        "url": "nike",
+        "image": "nike-logo.png"
+    },
+    {
+        "id": 2,
+        "name": "Adidas",
+        "url": "adidas",
+        "image": "adidas-logo.png"
+    },
+    {
+        "id": 3,
+        "name": "Puma",
+        "url": "puma",
+        "image": "puma-logo.png"
+    },
+    {
+        "id": 4,
+        "name": "Converse",
+        "url": "converse",
+        "image": "converse-logo.png"
+    }
+]
