@@ -1,8 +1,11 @@
 <div class="search">
-    <input type="text" name="search" placeholder="Search..." [(ngModel)]="searchProduct" />    
+    <input type="text" name="search" placeholder="Search..." [(ngModel)]="searchProduct"/>    
+</div>
+<div>
+    Category url: {{categoryName}}
 </div>
 <div class="web-content">
-    <div class="product-box" *ngFor="let product of products | filterProduct:searchProduct">
+    <div class="product-box" *ngFor="let product of products">
         <div class="product">
             <div class="add-cart"><a href="">+</a></div>
             <a routerLink="/product/{{product.id}}/{{product.url}}"><img src="images/thumbnail/{{product.thumb}}" alt="{{product.name}}"></a>

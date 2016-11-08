@@ -22,7 +22,8 @@ import { FilterProductPipe } from './helpers/filterProduct.pipe';
       { path: '**', redirectTo: 'home', pathMatch: 'full' }
     ]),
   ],
-  declarations: [AppComponent, HomeComponent, CategoryComponent, ProductComponent, FilterProductPipe],
+  declarations: [AppComponent, HomeComponent, CategoryComponent, ProductComponent,
+    FilterProductPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

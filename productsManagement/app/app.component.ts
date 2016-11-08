@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Category } from './model/category.model';
 import { ProductService } from './services/product.service';
+import { CategoryService } from './services/category.service';
+import { CategoryComponent } from './category/category.component';
 
 @Component({
     selector: 'my-app',
@@ -30,9 +32,10 @@ import { ProductService } from './services/product.service';
             Develop by <a href="http://linhho.net">Linh Hoo</a>
         </footer>
         `,
-    providers: [ProductService]
+    providers: [ProductService, CategoryService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+    errorMessage: string;
     websiteName:string = "Shoes 4u";
     //click show/hide cartbox
     showCart:boolean = false;
@@ -40,30 +43,12 @@ export class AppComponent {
         this.showCart = !this.showCart;    
     }
     //
-    categories:Category[] = [
-        { 
-            "id": 1,
-            "name": "Nike",
-            "url": "nike",
-            "image": "nike-logo.png"
-        },
-        {
-            "id": 2,
-            "name": "Adidas",
-            "url": "adidas",
-            "image": "adidas-logo.png"
-        },
-        {
-            "id": 3,
-            "name": "Puma",
-            "url": "puma",
-            "image": "puma-logo.png"
-        },
-        {
-            "id": 4,
-            "name": "Converse",
-            "url": "converse",
-            "image": "converse-logo.png"
-        }
-    ]
+     constructor(private _categoryService: CategoryService) {
+    }
+    categories:Category[];
+    ngOnInit(): void {
+        this._categoryService.getCategories()
+                .subscribe(categories => this.categories = categories,
+                           error => this.errorMessage = <any>error);
+    }
 }

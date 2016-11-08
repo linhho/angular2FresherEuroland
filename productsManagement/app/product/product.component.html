@@ -1,10 +1,11 @@
 <div class="web-content">
-    <div class="product-box">
+    <div class="product-box" *ngFor="let product of products | filterProduct:searchProduct">
         <div class="product">
-            <img src="images/thumbnail/{{product.thumb}}" alt="{{product.name}}">
+            <div class="add-cart"><a href="">+</a></div>
+            <a routerLink="/product/{{product.id}}/{{product.url}}"><img src="images/thumbnail/{{product.thumb}}" alt="{{product.name}}"></a>
             <div class="product-info">
-                <div class="product-name">{{product.name}}</div>
-                <div class="rating-star">*****</div>
+                <div class="product-name"><a routerLink="/product/{{product.id}}/{{product.url}}">{{product.name}}</a></div>
+                <div class="category-cart"><a routerLink="/category/{{product.category.url}}"><img src="images/{{product.category.image}}" alt="{{product.category.name}}"></a></div>
                 <div class="product-cost">{{product.cost | currency:'USD':true:'1.2-2'}}</div>
             </div>
         </div>
